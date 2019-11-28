@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/scan_local_music"
+    android:title="扫描本地音乐"
+    />
+    <item
+        android:id="@+id/select_sort_way"
+        android:title="选择排序方式"
+        />
+</menu>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MusicPlayer</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="music_logo">&#xe680;</string>
+    <string name="recent_play_logo">&#xe605;</string>
+    <string name="download_manager_logo">&#xe659;</string>
+    <string name="my_radio_logo">&#xe608;</string>
+    <string name="my_collections_logo">&#xe6c0;</string>
+    <string name="my_menu_logo">&#xe609;</string>
+    <string name="playing_logo">&#xe8c8;</string>
+</resources>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_menu_logo"
+        android:text="@string/my_menu_logo"
+        android:textSize="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginVertical="0dp"
+        android:layout_marginHorizontal="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/main_my_music_textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我的音乐"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/main_online_music_textView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="在线音乐"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        android:horizontalSpacing="5dp"
+        android:layout_marginVertical="5dp"
+        android:id="@+id/crossing_1"
+        android:layout_below="@id/my_menu_logo"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/my_menu_logo"
+        android:id="@+id/RelativeLayout_local">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/music_logo"
+    android:text="@string/music_logo"
+    android:textSize="20dp"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/music_logo"
+        android:id="@+id/local_music"
+        android:text="本地音乐 ("
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="0dp"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/local_music"
+        android:id="@+id/local_music_counter"
+        android:text="0"
+        android:textSize="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="0dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/local_music_counter"
+        android:text=")"
+        android:textSize="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="0dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="@string/playing_logo"
+            android:visibility="invisible"
+            android:textSize="20dp"
+            android:textColor="#FF4040"
+            android:id="@+id/textView_p1"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_recent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RelativeLayout_local"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/recent_play_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="19dp"
+            android:layout_marginVertical="5dp"
+            android:text="@string/recent_play_logo"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/recent_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginVertical="10dp"
+            android:layout_toRightOf="@id/recent_play_logo"
+            android:text="最近播放 ("
+            android:textSize="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"
+            android:horizontalSpacing="5dp"
+            android:layout_marginVertical="5dp"
+            android:id="@+id/crossing_2"
+            android:layout_toRightOf="@id/recent_play_logo"/>
+
+        <TextView
+            android:id="@+id/recent_play_music_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginVertical="10dp"
+            android:layout_toRightOf="@id/recent_play"
+            android:text="0"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginVertical="10dp"
+            android:layout_toRightOf="@id/recent_play_music_counter"
+            android:text=")"
+            android:textSize="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="@string/playing_logo"
+            android:visibility="invisible"
+            android:textSize="20dp"
+            android:textColor="#FF4040"
+            android:id="@+id/textView_p2"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RelativeLayout_recent"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            android:id="@+id/download_manager_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="19dp"
+            android:layout_marginVertical="5dp"
+            android:text="@string/download_manager_logo"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/download_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginVertical="10dp"
+            android:layout_toRightOf="@id/download_manager_logo"
+            android:text="下载管理 ("
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/download_manager_music_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginVertical="10dp"
+            android:layout_toRightOf="@id/download_manager"
+            android:text="0"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginVertical="10dp"
+            android:layout_toRightOf="@id/download_manager_music_counter"
+            android:text=")"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/crossing_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_toRightOf="@id/download_manager_logo"
+            android:background="#c0c0c0"
+            android:horizontalSpacing="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="@string/playing_logo"
+            android:visibility="invisible"
+            android:textSize="20dp"
+            android:textColor="#FF4040"
+            android:id="@+id/textView_p3"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RelativeLayout_download"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/my_radio_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="19dp"
+        android:text="@string/my_radio_logo"
+        android:layout_marginVertical="5dp"
+        android:textSize="25dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/my_radio_logo"
+        android:id="@+id/my_radio"
+        android:text="我的电台 ("
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="0dp"
+        android:textSize="20dp"/>
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/my_radio"
+        android:id="@+id/my_radio_counter"
+        android:text="0"
+        android:textSize="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="0dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/my_radio_counter"
+        android:text=")"
+        android:textSize="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="0dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="@string/playing_logo"
+            android:visibility="invisible"
+            android:textSize="20dp"
+            android:textColor="#FF4040"
+            android:id="@+id/textView_p4"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        android:horizontalSpacing="5dp"
+        android:layout_toRightOf="@id/my_radio_logo"
+        android:id="@+id/crossing_4"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_collections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RelativeLayout_radio"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/my_collections_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="19dp"
+        android:text="@string/my_collections_logo"
+        android:layout_marginVertical="5dp"
+        android:textSize="25dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/my_collections_logo"
+        android:id="@+id/my_collections"
+        android:text="我的收藏 ("
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="0dp"
+        android:textSize="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"
+            android:horizontalSpacing="5dp"
+            android:layout_marginVertical="5dp"
+            android:id="@+id/crossing_7"
+            android:layout_toRightOf="@id/my_collections_logo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/my_collections"
+        android:id="@+id/my_collections_counter"
+        android:text="0"
+        android:textSize="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="0dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/my_collections_counter"
+        android:text=")"
+        android:textSize="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="0dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="@string/playing_logo"
+            android:visibility="invisible"
+            android:textSize="20dp"
+            android:textColor="#FF4040"
+            android:id="@+id/textView_p5"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        android:horizontalSpacing="5dp"
+
+        android:layout_below="@id/my_collections"
+        android:id="@+id/crossing_5"/>
+    </RelativeLayout>
+
+</LinearLayout>

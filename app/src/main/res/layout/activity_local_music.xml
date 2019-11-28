@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LocalMusicActivity">
+
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/Relative_seek_bar"
+    android:id="@+id/songs_list_view"
+    />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Relative_seek_bar"
+        >
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/music_seek_bar"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/now_time"
+            android:hint="3:20"
+            android:layout_below="@id/music_seek_bar"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_music_name"
+            android:layout_below="@id/now_time"
+            android:hint="the music name"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/play"
+            android:id="@+id/play_music"
+            android:layout_below="@id/text_music_name"
+            android:layout_centerInParent="true"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/stop"
+            android:id="@+id/stop_music"
+            android:layout_below="@id/text_music_name"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/next_music"
+            android:id="@+id/next_music"
+            android:layout_below="@id/text_music_name"
+            android:layout_toLeftOf="@id/music_list"
+            android:layout_marginRight="130dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/last_music"
+            android:id="@+id/last_music"
+            android:layout_below="@id/text_music_name"
+            android:layout_toLeftOf="@id/next_music"
+            android:layout_marginRight="60dp"
+                        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/single_music_rotation"
+            android:src="@mipmap/single_rotation"
+            android:layout_below="@id/text_music_name"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/play_in_rotation"
+            android:src="@mipmap/play_in_rotation"
+            android:layout_below="@id/text_music_name"
+            android:visibility="invisible"
+            />
+        <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/play_in_sequence"
+        android:src="@mipmap/play_in_sequence"
+        android:layout_below="@id/text_music_name"
+        android:visibility="visible"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/random_play"
+            android:src="@mipmap/random_play"
+            android:layout_below="@id/text_music_name"
+            android:visibility="invisible"
+            />
+
+
+        <ImageView
+            android:id="@+id/music_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_music_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-6dp"
+            android:src="@mipmap/music_list" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
